@@ -1467,6 +1467,10 @@ class RowComparator {
       const std::vector<core::SortOrder>& sortingOrders,
       RowContainer* rowContainer);
 
+  RowComparator(
+      RowContainer* rowContainer,
+      std::vector<std::pair<column_index_t, core::SortOrder>> keyInfo);
+
   /// Returns true if lhs < rhs, false otherwise.
   bool operator()(const char* lhs, const char* rhs);
 
